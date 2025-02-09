@@ -1,0 +1,1 @@
+ASPECTRATIO = (800, 800)
