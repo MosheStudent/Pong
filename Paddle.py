@@ -3,7 +3,7 @@ import pygame
 #global variables for the sprite
 COLOR = (255, 255, 255)
 HEIGHT = 50
-WIDTH = 10
+WIDTH = 5
 POSX = 30
 POSY = 500
 

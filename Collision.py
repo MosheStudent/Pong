@@ -14,7 +14,7 @@ def collideCheck ():
         BALL.update()
 
 
-    if (BALL.rect.topleft [1] <= 0 or BALL.rect.bottomleft[1] >= ASPECTRATIO[1]):
+    if (BALL.rect.topleft [1] <= 0 or BALL.rect.bottomleft [1] >= ASPECTRATIO[1]):
         BALL.updY *= -1
         BALL.update()
 
