@@ -24,14 +24,10 @@ class Ball(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = (POSX, POSY)
 
-        self.updX = random.randint(-5,5)
-        self.updY = random.randint(-5,5)
+        abs = (-1,1)
+
+        self.updX = random.choice(abs) * BALLSPEED
+        self.updY = random.choice(abs) * BALLSPEED
     
     def update(self):
-        if (self.rect.topleft[0] <= 0 or self.rect.bottomright[0] >= ASPECTRATIO[0]):
-            self.updX *= -1
-
-        if (self.rect.topleft [1] <= 0 or self.rect.bottomleft[1] >= ASPECTRATIO[1]):
-            self.updY *= -1
-
         self.rect.center = (self.rect.centerx + self.updX, self.rect.centery + self.updY)

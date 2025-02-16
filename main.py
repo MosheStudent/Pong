@@ -5,6 +5,7 @@ from GLOBALSPRITE import *
 
 import Collision
 
+pygame.init()
 
 #DISPLAY VARS
 BACKGROUNDCOLOR = (0,0,0)
@@ -13,8 +14,6 @@ TITLEIMAGE = pygame.image.load('titleImage.png')
 
 #RUN VARS
 FPS = 60
-
-pygame.init()
 
 screen = pygame.display.set_mode(ASPECTRATIO)
 screen.fill(BACKGROUNDCOLOR)
@@ -35,10 +34,12 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     
+    Collision.collideCheck()
+    
     BALL.update()
     PADDLE.update()
 
-    Collision.collideCheck()
+    
 
     SPRITEGROUP.draw(screen)
 
